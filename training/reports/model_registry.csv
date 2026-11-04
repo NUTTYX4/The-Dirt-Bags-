@@ -1,0 +1,9 @@
+model_name,task,dataset_sources,class_count,status,checkpoint,test_macro_f1,export_status
+chilli_ch001_original_mobilenetv3,classification,CH-001 Mendeley v3 original,6,COMPLETED,training/outputs/chilli_baseline/best_model.pth,0.992979,EXPORTED_model.onnx
+tomato_plantvillage_mobilenetv3,classification,PlantVillage Tomato documented classes,9,COMPLETED,training/outputs/tomato_plantvillage_20261105/best_model.pth,0.991867,EXPORTED_model.onnx
+tomato_tuta_detection,detection,Tuta absoluta image-level label CSV,UNKNOWN,BLOCKED_NO_BOUNDING_BOXES,,,
+tuta_binary_fast,classifier,Tuta CSV image labels,2,TRAINING,training/outputs/tuta_binary_20261105/best_model.pth,,PENDING
+liriomyza_binary,classifier,No verified local labelled source,2,BLOCKED_NO_DATA,,,NOT_APPLICABLE
+tomato_field_plantdoc,classifier,PlantDoc classification partial extraction,UNKNOWN,BLOCKED_INCOMPLETE_EXTRACTION,,,NOT_APPLICABLE
+chilli_extended,classifier,Unattributed supplementary sources,UNKNOWN,BLOCKED_UNSAFE_TAXONOMY,,,NOT_APPLICABLE
+ip102_pest_fast,classifier,IP102 local classification source,102,READY_PENDING_GPU,,,PENDING

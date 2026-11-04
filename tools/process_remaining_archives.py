@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -27,6 +28,11 @@ JOBS = [
 
 
 def main() -> None:
+    if os.environ.get("CROPSCOPE_ALLOW_SOURCE_ARCHIVE_DELETE") != "YES":
+        raise SystemExit(
+            "Disabled by default: this legacy script deletes verified source archives. "
+            "Use the non-destructive Chilli preparation tools instead."
+        )
     log_rows: list[dict[str, str]] = []
     for source, dataset in JOBS:
         if not source.exists():

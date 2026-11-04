@@ -1,0 +1,16 @@
+model: mobilenet_v3_large
+pretrained: true
+image_size: 224
+batch_size: 16
+epochs: 15
+warmup_epochs: 1
+learning_rate: 0.0003
+weight_decay: 0.0001
+random_seed: 42
+early_stopping_patience: 4
+num_workers: 2
+pin_memory: true
+mixed_precision: true
+channels_last: false
+dataset_root: DATASETS/CHILLI/chilli_leaf_disease/ch001_mendeley_v3/extracted/Chili Leaf Disease Original Dataset/Chili Leaf Disease Original Dataset
+output_dir: training/outputs/chilli_baseline

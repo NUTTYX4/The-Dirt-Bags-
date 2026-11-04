@@ -20,3 +20,13 @@ __pycache__/
 *.ckpt
 *.onnx
 *.engine
+
+# Local repository context bundles.
+repomix-*.xml
+
+# Kaggle run inputs and outputs.
+kaggle_chilli_dataset/
+kaggle_outputs/
+cropscope_outputs/
+chilli-original-images.zip
+training/outputs/

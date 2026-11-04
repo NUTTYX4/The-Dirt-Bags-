@@ -1,0 +1,1 @@
+"""CropScope AI training utilities."""

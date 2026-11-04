@@ -23,3 +23,7 @@ This repository is for collecting and documenting original datasets only. It con
 - General and multi-crop datasets: `DATASETS/SHARED/<dataset>/downloads/`
 
 Extract each archive only into its sibling `extracted/` folder. Raw archives and extracted data are intentionally excluded from Git; the documentation and inventory remain version controlled.
+# CropScope AI
+
+For the primary local RTX 3050 Chilli classifier workflow, see
+[training/README_LOCAL_TRAINING.md](training/README_LOCAL_TRAINING.md).

@@ -1,0 +1,15 @@
+models:
+  - id: chilli_disease_v1
+    name: CH-001 Chilli Disease Classifier
+    version: "1"
+    crop: chilli
+    task: classification
+    artifact: /models/chilli_baseline/model.onnx
+    metadata_dir: /models/chilli_baseline
+  - id: tomato_disease_plantvillage_v1
+    name: PlantVillage Tomato Disease Classifier
+    version: "1"
+    crop: tomato
+    task: classification
+    artifact: /models/tomato_plantvillage_20261105/model.onnx
+    metadata_dir: /models/tomato_plantvillage_20261105

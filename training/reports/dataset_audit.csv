@@ -1,0 +1,9 @@
+source_id,local_path,crop,task,classes_or_labels,status,recommended_usage,notes
+ch001_original,DATASETS/CHILLI/chilli_leaf_disease/ch001_mendeley_v3,Chilli,classification,6 original classes,READY,completed baseline,14 conflicting exact duplicate samples excluded from manifest
+ch001_augmented,DATASETS/CHILLI/chilli_leaf_disease,Chilli,classification,augmentation-labelled,NEEDS_REVIEW,training-only experiment only,provenance/grouping not independently validated
+plantvillage_tomato,DATASETS/SHARED/plantvillage,Tomato,classification,9 disease-or-healthy classes plus excluded spider-mite class,READY,completed source-specific model,documented directory taxonomy
+plantwild_tomato,DATASETS/SHARED/plantwild,Tomato,classification,7 clearly matching disease labels plus ambiguous tomato leaf,READY_WITH_WARNINGS,external-domain evaluation,not merged into training taxonomy
+tuta_absoluta,DATASETS/TOMATO/tuta_absoluta,Tomato,pest image classification,CSV image labels,NEEDS_REVIEW,do not train detection,no verified boxes or source label semantics for H/NH
+liriomyza,DATASETS/TOMATO/liriomyza,Tomato,unknown,none, BLOCKED,no model,no downloaded usable source
+plantdoc,DATASETS/SHARED/plantdoc_classification,Multi-crop,classification,source hierarchy,NEEDS_REVIEW,source-specific audit,Windows extraction issue due invalid filename
+ip102,DATASETS/SHARED/ip102,Multi-crop,pest classification,large pest taxonomy,NEEDS_REVIEW,separate pest model only,license/source mapping must be reviewed

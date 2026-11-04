@@ -1,0 +1,17 @@
+model: mobilenet_v3_large
+pretrained: true
+image_size: 224
+batch_size: 16
+epochs: 25
+warmup_epochs: 1
+learning_rate: 0.0003
+weight_decay: 0.0001
+random_seed: 42
+early_stopping_patience: 5
+num_workers: 0
+pin_memory: true
+mixed_precision: true
+dataset_root: DATASETS/TOMATO/tuta_absoluta/extracted
+manifest_path: training/outputs/tuta_binary_20261105/dataset_manifest.csv
+class_names_path: training/outputs/tuta_binary_20261105/class_names.json
+output_dir: training/outputs/tuta_binary_20261105

@@ -1,0 +1,8 @@
+source_id,source_label,canonical_label,decision
+ch001_original,Bacterial Spot,Bacterial Spot,retained
+ch001_original,Cercospora Leaf Spot,Cercospora Leaf Spot,retained
+ch001_original,Curl Virus,Curl Virus,retained
+ch001_original,Healthy Leaf,Healthy Leaf,retained
+ch001_original,Nutrition Deficiency,Nutrition Deficiency,retained
+ch001_original,White spot,White spot,retained
+plantvillage_tomato,Tomato___Spider_mites Two-spotted_spider_mite,,excluded pest from disease model
