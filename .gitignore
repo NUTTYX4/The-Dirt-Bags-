@@ -1,0 +1,22 @@
+# Python environment
+.venv/
+__pycache__/
+*.py[cod]
+
+# Dataset files - keep raw images and archives out of Git
+datasets/raw/
+datasets/processed/tomato/tuta_extracted/
+*.zip
+*.jpg
+*.jpeg
+*.png
+
+# Model files
+*.pt
+*.pth
+*.onnx
+*.h5
+
+# Temporary files
+.ipynb_checkpoints/
+.DS_Store
