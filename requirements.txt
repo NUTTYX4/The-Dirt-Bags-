@@ -1,0 +1,61 @@
+# CropScope AI - dataset acquisition, validation, curation and training support
+# Recommended environment: Windows 10/11, 64-bit Python 3.11
+# Install the matching PyTorch + torchvision CUDA build FIRST (see notes below).
+# Do not add torch/torchvision here: the correct wheels depend on the central GPU's
+# NVIDIA driver, supported CUDA wheel and Python version.
+
+# -----------------------------------------------------------------------------
+# 1. Downloads, API access, resumable transfers and progress reporting
+# -----------------------------------------------------------------------------
+requests>=2.32,<3
+httpx>=0.27,<1
+aiohttp>=3.10,<4
+tqdm>=4.66,<5
+rich>=13.9,<15
+tenacity>=9,<10
+filelock>=3.16,<4
+python-dotenv>=1,<2
+huggingface_hub>=0.32
+gdown>=5.2,<6
+
+# -----------------------------------------------------------------------------
+# 2. Archive handling, metadata and tabular dataset catalogues
+# -----------------------------------------------------------------------------
+py7zr>=0.22,<1
+openpyxl>=3.1.5,<4
+pyarrow>=17,<25
+pandas>=2.2,<4
+PyYAML>=6.0.2,<7
+jsonschema>=4.23,<5
+pydantic>=2.9,<3
+
+# -----------------------------------------------------------------------------
+# 3. Image loading, validation, preprocessing and duplicate analysis
+# -----------------------------------------------------------------------------
+numpy>=1.26,<3
+Pillow>=10,<13
+opencv-python>=4.10,<5
+scipy>=1.13,<2
+scikit-learn>=1.5,<2
+imagehash>=4.3,<5
+albumentations>=1.4,<3
+
+# -----------------------------------------------------------------------------
+# 4. Visual inspection, notebooks and diagnostics
+# -----------------------------------------------------------------------------
+matplotlib>=3.9,<4
+seaborn>=0.13,<1
+jupyterlab>=4.2,<5
+ipykernel>=6.29,<8
+psutil>=6,<8
+
+# -----------------------------------------------------------------------------
+# 5. Dataset versioning (local SSD / SMB-backed DVC remote)
+# -----------------------------------------------------------------------------
+dvc>=3.50,<4
+
+# -----------------------------------------------------------------------------
+# 7. Project quality checks
+# -----------------------------------------------------------------------------
+pytest>=8.3,<9
+ruff>=0.6,<1

@@ -1,0 +1,2 @@
+filename,size_bytes,source_sha256,copied_sha256,integrity_status
+archive.zip,2416720401,301468280af765c09bf2febcaea6e0ef45e2257855eaf77c36c7c6f191732566,301468280af765c09bf2febcaea6e0ef45e2257855eaf77c36c7c6f191732566,MATCH

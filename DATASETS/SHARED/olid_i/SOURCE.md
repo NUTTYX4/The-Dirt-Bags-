@@ -1,18 +1,7 @@
-# Dataset Information
+# olid_i
 
-Dataset Name: 
-Dataset ID: 
-Source / Author: 
-Original URL: 
-License: 
-Version: 
-Download Date: 
-Downloaded By: 
+Official source: https://zenodo.org/records/8095498
 
-Crop Coverage: 
-Number of Original Images: 
-Original Classes: 
-Annotation Format: 
+19 original ZIP parts plus class_distribution.xlsx. Zenodo lists 4,749 high-resolution field images, 8 crop species and 57 classes. The source record's licence must be checked before redistribution; this script verifies part MD5 hashes listed by Zenodo.
 
-Notes: 
-Known Limitations: 
+Downloaded by CropScope AI shared dataset downloader. Original source files are not modified.

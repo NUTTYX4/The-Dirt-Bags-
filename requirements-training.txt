@@ -1,0 +1,11 @@
+# CropScope AI - model training and export add-ons
+# Install the exact PyTorch + torchvision build for the central GPU FIRST.
+# See https://pytorch.org/get-started/locally/ and select Windows / Pip / Python / CUDA.
+# Then install this file. Do not install PyTorch from a generic PyPI command.
+
+ultralytics>=8.3
+timm>=1.0,<2
+torchmetrics>=1.4,<2
+tensorboard>=2.17,<3
+onnx>=1.16,<2
+onnxruntime>=1.19,<2

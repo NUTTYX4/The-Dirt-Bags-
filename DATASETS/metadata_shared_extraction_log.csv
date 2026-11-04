@@ -1,0 +1,28 @@
+dataset_id,archive,integrity_status,extraction_status,extracted_file_count,extracted_size_bytes,duration_seconds,details
+ip102,downloads/google_drive_folder/Classification/ip102_v1.1.tar,MATCH,SUCCESS,75225,3193072847,125.27,validated and extracted
+ip102,downloads/google_drive_folder/Detection/VOC2007/Annotations.tar,MATCH,SUCCESS,18983,12089020,28.78,validated and extracted
+ip102,downloads/google_drive_folder/Detection/VOC2007/JPEGImages.tar,MATCH,SUCCESS,18981,808376194,32.03,validated and extracted
+olid_i,downloads/part_1.zip,MATCH,SUCCESS,435,1840644004,9.44,validated and extracted
+olid_i,downloads/part_10.zip,MATCH,SUCCESS,247,1234478898,4.89,validated and extracted
+olid_i,downloads/part_11.zip,MATCH,SUCCESS,168,705679339,3.08,validated and extracted
+olid_i,downloads/part_12.zip,MATCH,SUCCESS,314,1380325224,5.84,validated and extracted
+olid_i,downloads/part_13.zip,MATCH,SUCCESS,247,1187027194,5.03,validated and extracted
+olid_i,downloads/part_14.zip,MATCH,SUCCESS,232,909673910,4.47,validated and extracted
+olid_i,downloads/part_15.zip,MATCH,SUCCESS,173,621079313,2.83,validated and extracted
+olid_i,downloads/part_16.zip,MATCH,SUCCESS,154,463187684,2.3,validated and extracted
+olid_i,downloads/part_17.zip,MATCH,SUCCESS,570,2764566484,15.75,validated and extracted
+olid_i,downloads/part_18.zip,MATCH,SUCCESS,279,1311271654,5.08,validated and extracted
+olid_i,downloads/part_19.zip,MATCH,SUCCESS,289,1346943163,5.83,validated and extracted
+olid_i,downloads/part_2.zip,MATCH,SUCCESS,505,2146319203,11.39,validated and extracted
+olid_i,downloads/part_3.zip,MATCH,SUCCESS,323,1341094279,5.72,validated and extracted
+olid_i,downloads/part_4.zip,MATCH,SUCCESS,141,455037754,1.94,validated and extracted
+olid_i,downloads/part_5.zip,MATCH,SUCCESS,363,1412037266,6.47,validated and extracted
+olid_i,downloads/part_6.zip,MATCH,SUCCESS,207,784190122,3.64,validated and extracted
+olid_i,downloads/part_7.zip,MATCH,SUCCESS,99,221684441,1.39,validated and extracted
+olid_i,downloads/part_8.zip,MATCH,SUCCESS,185,658791709,3.31,validated and extracted
+olid_i,downloads/part_9.zip,MATCH,SUCCESS,124,395190662,1.94,validated and extracted
+plantdoc_classification,downloads/PlantDoc-Dataset-master.zip,MATCH,FAILED,0,0,2.45,OSError: [Errno 22] Invalid argument: 'C:\\Projects\\The Dirt Bags\\DATASET_INBOX\\SHARED\\plantdoc_classification\\extracted\\PlantDoc-Dataset-master\\PlantDoc-Dataset-master\\test\\Bell_pepper leaf\\IMG_1629.JPG?1507122477.jpg'
+plantdoc_detection,downloads/PlantDoc-Object-Detection-Dataset-master.zip,MATCH,FAILED,0,0,2.34,OSError: [Errno 22] Invalid argument: 'C:\\Projects\\The Dirt Bags\\DATASET_INBOX\\SHARED\\plantdoc_detection\\extracted\\PlantDoc-Object-Detection-Dataset-master\\PlantDoc-Object-Detection-Dataset-master\\TEST\\1421_0.jpeg?itok=FMtmgePj.jpg'
+plantvillage,downloads/PlantVillage_data.zip,MATCH,SUCCESS,162916,2180207308,185.17,validated and extracted
+plantwild,downloads/plantwild.zip,MATCH,SUCCESS,18547,2749736354,40.55,validated and extracted
+veghealth14,downloads/VegHealth14 A Multi-Crop Leaf Disease Image Datase.zip,MATCH,SUCCESS,2,1985967802,23.06,validated and extracted

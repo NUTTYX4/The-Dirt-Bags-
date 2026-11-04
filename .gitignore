@@ -3,3 +3,20 @@ DATASETS/**/downloads/*
 !DATASETS/**/downloads/.gitkeep
 DATASETS/**/extracted/*
 !DATASETS/**/extracted/.gitkeep
+
+# Keep raw dataset material local; commit only its small reports and metadata.
+DATASETS/**/failed_extraction/*
+DATASETS/_REVIEW_REQUIRED/raw/*
+DATASETS/TRAINING_READY/*.csv
+DATASETS/TRAINING_READY/*.json
+DATASETS/**/metadata/extracted_inventory.csv
+
+# Local environments and generated model artifacts.
+.venv/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
