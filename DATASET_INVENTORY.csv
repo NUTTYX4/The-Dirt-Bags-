@@ -1,0 +1,12 @@
+dataset_id,dataset_name,crop,source,source_url,license,version,downloaded_by,download_date,download_status,archive_location,extracted_location,original_classes,notes
+tomato_tuta_absoluta,tuta_absoluta,tomato,,,,,,,pending,DATASETS/TOMATO/tuta_absoluta/downloads/,DATASETS/TOMATO/tuta_absoluta/extracted/,,
+tomato_liriomyza,liriomyza,tomato,,,,,,,pending,DATASETS/TOMATO/liriomyza/downloads/,DATASETS/TOMATO/liriomyza/extracted/,,
+tomato_mixed_infestation,mixed_infestation,tomato,,,,,,,pending,DATASETS/TOMATO/mixed_infestation/downloads/,DATASETS/TOMATO/mixed_infestation/extracted/,,
+chilli_leaf_disease,chilli_leaf_disease,chilli,,,,,,,pending,DATASETS/CHILLI/chilli_leaf_disease/downloads/,DATASETS/CHILLI/chilli_leaf_disease/extracted/,,
+chilli_supplementary,chilli_supplementary,chilli,,,,,,,pending,DATASETS/CHILLI/chilli_supplementary/downloads/,DATASETS/CHILLI/chilli_supplementary/extracted/,,
+shared_plantvillage,plantvillage,multi-crop,,,,,,,pending,DATASETS/SHARED/plantvillage/downloads/,DATASETS/SHARED/plantvillage/extracted/,,
+shared_plantdoc,plantdoc,multi-crop,,,,,,,pending,DATASETS/SHARED/plantdoc/downloads/,DATASETS/SHARED/plantdoc/extracted/,,
+shared_veghealth14,veghealth14,multi-crop,,,,,,,pending,DATASETS/SHARED/veghealth14/downloads/,DATASETS/SHARED/veghealth14/extracted/,,
+shared_olid_i,olid_i,multi-crop,,,,,,,pending,DATASETS/SHARED/olid_i/downloads/,DATASETS/SHARED/olid_i/extracted/,,
+shared_ip102,ip102,multi-crop,,,,,,,pending,DATASETS/SHARED/ip102/downloads/,DATASETS/SHARED/ip102/extracted/,,
+shared_other_general,other_general,multi-crop,,,,,,,pending,DATASETS/SHARED/other_general/downloads/,DATASETS/SHARED/other_general/extracted/,,

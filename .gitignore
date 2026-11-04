@@ -1,0 +1,5 @@
+# Preserve directory markers while excluding all raw dataset content.
+DATASETS/**/downloads/*
+!DATASETS/**/downloads/.gitkeep
+DATASETS/**/extracted/*
+!DATASETS/**/extracted/.gitkeep
