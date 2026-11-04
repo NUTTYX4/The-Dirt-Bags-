@@ -30,3 +30,7 @@ kaggle_outputs/
 cropscope_outputs/
 chilli-original-images.zip
 training/outputs/
+.DS_Store
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
