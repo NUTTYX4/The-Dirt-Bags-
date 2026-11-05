@@ -7,6 +7,9 @@ class Registry:
   self.items={x['id']:x for x in yaml.safe_load(Path('/app/model_registry.yaml').read_text())['models']};self.sessions={}
  def details(self):
   return [{**x,'ready':Path(x['artifact']).exists() and Path(x['metadata_dir'],'class_names.json').exists(),'supported_formats':['image/jpeg','image/png','image/webp']} for x in self.items.values()]
+ def route(self,crop,plant_part):
+  candidates=[x for x in self.details() if x['ready'] and x.get('crop')==crop and plant_part in x.get('supported_plant_parts',[])]
+  return sorted(candidates,key=lambda x:x.get('inspection_priority',99))[0] if candidates else None
  def predict(self,model_id,data,top_k):
   x=self.items.get(model_id)
   if not x or not Path(x['artifact']).exists():raise ValueError('Requested model is not ready')

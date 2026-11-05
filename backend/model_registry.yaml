@@ -4,6 +4,9 @@ models:
     version: "1"
     crop: chilli
     task: classification
+    supported_plant_parts: [leaf]
+    inspection_priority: 1
+    confidence_threshold: 0.50
     artifact: /models/chilli_baseline/model.onnx
     metadata_dir: /models/chilli_baseline
   - id: tomato_disease_plantvillage_v1
@@ -11,5 +14,28 @@ models:
     version: "1"
     crop: tomato
     task: classification
+    supported_plant_parts: [leaf]
+    inspection_priority: 1
+    confidence_threshold: 0.50
     artifact: /models/tomato_plantvillage_20261105/model.onnx
     metadata_dir: /models/tomato_plantvillage_20261105
+  - id: tuta_binary_v1
+    name: Tuta Absoluta Image-Level Classifier
+    version: "1"
+    crop: tomato
+    task: pest_classification
+    supported_plant_parts: []
+    inspection_priority: 99
+    confidence_threshold: 0.50
+    artifact: /models/tuta_binary_20261105/model.onnx
+    metadata_dir: /models/tuta_binary_20261105
+  - id: ip102_pest_v1
+    name: IP102 General Pest Classifier
+    version: "1"
+    crop: multi_crop
+    task: pest_classification
+    supported_plant_parts: []
+    inspection_priority: 99
+    confidence_threshold: 0.50
+    artifact: /models/ip102_pest_fast_20261105/model.onnx
+    metadata_dir: /models/ip102_pest_fast_20261105

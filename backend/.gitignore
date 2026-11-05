@@ -1,4 +1,6 @@
 .env
+.gemini_rate_state.json
 uploads/
+test_assets/
 __pycache__/
 .pytest_cache/

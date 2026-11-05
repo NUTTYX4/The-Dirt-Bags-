@@ -1,40 +1,17 @@
-export interface ModelInfo {
-  id: string;
-  name: string;
-  version: string;
-  crop: string;
-  task: string;
-  ready: boolean;
-  supported_formats: string[];
-}
-
-export interface ApiStatus {
-  online: boolean;
-  models: ModelInfo[];
-  message?: string;
-}
-
-const baseUrl = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
-const endpoint = (path: string) => `${baseUrl}${path}`;
-
-export async function getApiStatus(signal?: AbortSignal): Promise<ApiStatus> {
-  try {
-    const [healthResponse, modelsResponse] = await Promise.all([
-      fetch(endpoint('/health/ready'), { signal }),
-      fetch(endpoint('/api/v1/models'), { signal })
-    ]);
-
-    if (!healthResponse.ok || !modelsResponse.ok) {
-      throw new Error('The plant-check service is not ready.');
-    }
-
-    const models = (await modelsResponse.json()) as ModelInfo[];
-    return { online: true, models };
-  } catch {
-    return {
-      online: false,
-      models: [],
-      message: 'Phytora cannot reach the plant-check service right now.'
-    };
-  }
-}
+export interface ModelInfo { id:string; name:string; version:string; crop:string; task:string; ready:boolean; supported_formats:string[]; }
+export interface ApiStatus { online:boolean; models:ModelInfo[]; message?:string; }
+export interface Prediction { prediction_id?:string; predicted_label?:string; predicted_class?:string; confidence:number; top_k?:{label:string;confidence:number}[]; top_predictions?:{label:string;confidence:number}[]; }
+export interface InspectionResult { inspection_id:string; status:string; message?:string; assistant_message?:string|null; identification?:{crop?:string|null;plant_part?:string|null;source?:string;certainty?:string}; selected_model?:{model_id:string;status:string}|null; prediction?:Prediction|null; created_at?:string; }
+export interface ChatSession { session_id:string; title:string; created_at:string; updated_at:string; }
+export interface ChatMessage { id:string; role:'user'|'assistant'; content:string; ui_blocks:unknown[]; created_at:string; }
+const baseUrl=(import.meta.env.VITE_API_BASE_URL||'').replace(/\/$/,'');
+const endpoint=(path:string)=>`${baseUrl}${path}`;
+export const inspectionImageUrl=(inspectionId:string)=>endpoint(`/api/v1/inspections/${inspectionId}/image`);
+export async function createInspection(image:File,cropHint?:string,geminiConsent=false,sessionId?:string):Promise<InspectionResult>{const body=new FormData();body.append('image',image);body.append('gemini_image_routing_consent',String(geminiConsent));if(sessionId)body.append('session_id',sessionId);if(cropHint){body.append('crop_hint',cropHint);body.append('plant_part_hint','leaf');}const response=await fetch(endpoint('/api/v1/inspections'),{method:'POST',body});if(!response.ok)throw new Error('Inspection could not be completed.');return response.json();}
+export async function createChatSession():Promise<ChatSession>{const response=await fetch(endpoint('/api/v1/chat/sessions?title=New%20plant%20inspection'),{method:'POST'});if(!response.ok)throw new Error('Could not create conversation.');return response.json();}
+export async function listChatSessions():Promise<ChatSession[]>{const response=await fetch(endpoint('/api/v1/chat/sessions'));if(!response.ok)throw new Error('Could not load conversations.');return response.json();}
+export async function getChatSession(sessionId:string):Promise<ChatSession>{const response=await fetch(endpoint(`/api/v1/chat/sessions/${sessionId}`));if(!response.ok)throw new Error('Conversation not found.');return response.json();}
+export async function getChatMessages(sessionId:string):Promise<ChatMessage[]>{const response=await fetch(endpoint(`/api/v1/chat/sessions/${sessionId}/messages`));if(!response.ok)throw new Error('Could not load messages.');return response.json();}
+export async function sendChatMessage(sessionId:string,text:string){const body=new FormData();body.append('text',text);const response=await fetch(endpoint(`/api/v1/chat/sessions/${sessionId}/messages`),{method:'POST',body});if(!response.ok)throw new Error('Message could not be sent.');return response.json();}
+export async function listInspections(sessionId:string):Promise<InspectionResult[]>{const response=await fetch(endpoint(`/api/v1/inspections?session_id=${encodeURIComponent(sessionId)}`));if(!response.ok)throw new Error('Could not load inspections.');return response.json();}
+export async function getApiStatus(signal?:AbortSignal):Promise<ApiStatus>{try{const[health,models]=await Promise.all([fetch(endpoint('/health/ready'),{signal}),fetch(endpoint('/api/v1/models'),{signal})]);if(!health.ok||!models.ok)throw new Error();return{online:true,models:await models.json()};}catch{return{online:false,models:[],message:'Phytora cannot reach the plant-check service right now.'};}}

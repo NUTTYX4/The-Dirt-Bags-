@@ -1,0 +1,459 @@
+{
+  "health": {
+    "pass": true,
+    "detail": {
+      "ready": true,
+      "database": true,
+      "models": [
+        {
+          "id": "chilli_disease_v1",
+          "name": "CH-001 Chilli Disease Classifier",
+          "version": "1",
+          "crop": "chilli",
+          "task": "classification",
+          "supported_plant_parts": [
+            "leaf"
+          ],
+          "inspection_priority": 1,
+          "confidence_threshold": 0.5,
+          "artifact": "/models/chilli_baseline/model.onnx",
+          "metadata_dir": "/models/chilli_baseline",
+          "ready": true,
+          "supported_formats": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ]
+        },
+        {
+          "id": "tomato_disease_plantvillage_v1",
+          "name": "PlantVillage Tomato Disease Classifier",
+          "version": "1",
+          "crop": "tomato",
+          "task": "classification",
+          "supported_plant_parts": [
+            "leaf"
+          ],
+          "inspection_priority": 1,
+          "confidence_threshold": 0.5,
+          "artifact": "/models/tomato_plantvillage_20261105/model.onnx",
+          "metadata_dir": "/models/tomato_plantvillage_20261105",
+          "ready": true,
+          "supported_formats": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ]
+        },
+        {
+          "id": "tuta_binary_v1",
+          "name": "Tuta Absoluta Image-Level Classifier",
+          "version": "1",
+          "crop": "tomato",
+          "task": "pest_classification",
+          "supported_plant_parts": [],
+          "inspection_priority": 99,
+          "confidence_threshold": 0.5,
+          "artifact": "/models/tuta_binary_20261105/model.onnx",
+          "metadata_dir": "/models/tuta_binary_20261105",
+          "ready": true,
+          "supported_formats": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ]
+        },
+        {
+          "id": "ip102_pest_v1",
+          "name": "IP102 General Pest Classifier",
+          "version": "1",
+          "crop": "multi_crop",
+          "task": "pest_classification",
+          "supported_plant_parts": [],
+          "inspection_priority": 99,
+          "confidence_threshold": 0.5,
+          "artifact": "/models/ip102_pest_fast_20261105/model.onnx",
+          "metadata_dir": "/models/ip102_pest_fast_20261105",
+          "ready": true,
+          "supported_formats": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ]
+        }
+      ],
+      "gemini": {
+        "enabled": true,
+        "configured": true
+      }
+    }
+  },
+  "models": {
+    "pass": true,
+    "detail": [
+      {
+        "id": "chilli_disease_v1",
+        "name": "CH-001 Chilli Disease Classifier",
+        "version": "1",
+        "crop": "chilli",
+        "task": "classification",
+        "supported_plant_parts": [
+          "leaf"
+        ],
+        "inspection_priority": 1,
+        "confidence_threshold": 0.5,
+        "artifact": "/models/chilli_baseline/model.onnx",
+        "metadata_dir": "/models/chilli_baseline",
+        "ready": true,
+        "supported_formats": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ]
+      },
+      {
+        "id": "tomato_disease_plantvillage_v1",
+        "name": "PlantVillage Tomato Disease Classifier",
+        "version": "1",
+        "crop": "tomato",
+        "task": "classification",
+        "supported_plant_parts": [
+          "leaf"
+        ],
+        "inspection_priority": 1,
+        "confidence_threshold": 0.5,
+        "artifact": "/models/tomato_plantvillage_20261105/model.onnx",
+        "metadata_dir": "/models/tomato_plantvillage_20261105",
+        "ready": true,
+        "supported_formats": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ]
+      },
+      {
+        "id": "tuta_binary_v1",
+        "name": "Tuta Absoluta Image-Level Classifier",
+        "version": "1",
+        "crop": "tomato",
+        "task": "pest_classification",
+        "supported_plant_parts": [],
+        "inspection_priority": 99,
+        "confidence_threshold": 0.5,
+        "artifact": "/models/tuta_binary_20261105/model.onnx",
+        "metadata_dir": "/models/tuta_binary_20261105",
+        "ready": true,
+        "supported_formats": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ]
+      },
+      {
+        "id": "ip102_pest_v1",
+        "name": "IP102 General Pest Classifier",
+        "version": "1",
+        "crop": "multi_crop",
+        "task": "pest_classification",
+        "supported_plant_parts": [],
+        "inspection_priority": 99,
+        "confidence_threshold": 0.5,
+        "artifact": "/models/ip102_pest_fast_20261105/model.onnx",
+        "metadata_dir": "/models/ip102_pest_fast_20261105",
+        "ready": true,
+        "supported_formats": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ]
+      }
+    ]
+  },
+  "tomato": {
+    "pass": true,
+    "detail": {
+      "inspection_id": "1341a296-1049-40fc-bf8c-2d9b1ddf1a6b",
+      "status": "completed",
+      "identification": {
+        "crop": "tomato",
+        "plant_part": "leaf",
+        "source": "manual_hint",
+        "certainty": "high"
+      },
+      "selected_model": {
+        "model_id": "tomato_disease_plantvillage_v1",
+        "status": "ready"
+      },
+      "prediction": {
+        "model_id": "tomato_disease_plantvillage_v1",
+        "model_version": "1",
+        "predicted_label": "Early blight",
+        "confidence": 0.9939590692520142,
+        "top_k": [
+          {
+            "label": "Early blight",
+            "confidence": 0.9939590692520142
+          },
+          {
+            "label": "Septoria leaf spot",
+            "confidence": 0.00567666906863451
+          },
+          {
+            "label": "Late blight",
+            "confidence": 0.0003558831522241235
+          }
+        ],
+        "inference_time_ms": 11.68,
+        "prediction_id": "d9b48d6a-53c7-46fb-aa75-e74611b3b4d4",
+        "predicted_class": "Early blight",
+        "top_predictions": [
+          {
+            "label": "Early blight",
+            "confidence": 0.9939590692520142
+          },
+          {
+            "label": "Septoria leaf spot",
+            "confidence": 0.00567666906863451
+          },
+          {
+            "label": "Late blight",
+            "confidence": 0.0003558831522241235
+          }
+        ]
+      },
+      "assistant_message": null,
+      "inference_time_ms": 11.68,
+      "message": "Local CropScope leaf-model result.",
+      "next_action": null,
+      "routing_metadata": {
+        "gemini_image_routing_consent": false,
+        "gemini_request_success": null,
+        "gemini_failure_reason": null,
+        "image_quality": null,
+        "needs_confirmation": false,
+        "routing_observations": []
+      },
+      "created_at": "2026-11-05T02:03:44.579093"
+    }
+  },
+  "chilli": {
+    "pass": true,
+    "detail": {
+      "inspection_id": "1b0d2778-7bc2-4d3a-a18e-9ab4f28a9754",
+      "status": "completed",
+      "identification": {
+        "crop": "chilli",
+        "plant_part": "leaf",
+        "source": "manual_hint",
+        "certainty": "high"
+      },
+      "selected_model": {
+        "model_id": "chilli_disease_v1",
+        "status": "ready"
+      },
+      "prediction": {
+        "model_id": "chilli_disease_v1",
+        "model_version": "1",
+        "predicted_label": "Bacterial Spot",
+        "confidence": 0.6535269618034363,
+        "top_k": [
+          {
+            "label": "Bacterial Spot",
+            "confidence": 0.6535269618034363
+          },
+          {
+            "label": "Cercospora Leaf Spot",
+            "confidence": 0.333408385515213
+          },
+          {
+            "label": "Nutrition Deficiency",
+            "confidence": 0.012598172761499882
+          }
+        ],
+        "inference_time_ms": 11.38,
+        "prediction_id": "0863af2b-f53c-45aa-84d3-778c3c384c95",
+        "predicted_class": "Bacterial Spot",
+        "top_predictions": [
+          {
+            "label": "Bacterial Spot",
+            "confidence": 0.6535269618034363
+          },
+          {
+            "label": "Cercospora Leaf Spot",
+            "confidence": 0.333408385515213
+          },
+          {
+            "label": "Nutrition Deficiency",
+            "confidence": 0.012598172761499882
+          }
+        ]
+      },
+      "assistant_message": null,
+      "inference_time_ms": 11.38,
+      "message": "Local CropScope leaf-model result.",
+      "next_action": null,
+      "routing_metadata": {
+        "gemini_image_routing_consent": false,
+        "gemini_request_success": null,
+        "gemini_failure_reason": null,
+        "image_quality": null,
+        "needs_confirmation": false,
+        "routing_observations": []
+      },
+      "created_at": "2026-11-05T02:03:44.755297"
+    }
+  },
+  "no_crop": {
+    "pass": true,
+    "detail": {
+      "inspection_id": "1226f715-ea9b-42bf-a33b-cc7e7c0df030",
+      "status": "needs_crop_confirmation",
+      "identification": {
+        "crop": null,
+        "plant_part": null,
+        "source": "none",
+        "certainty": "unknown"
+      },
+      "selected_model": null,
+      "prediction": null,
+      "assistant_message": null,
+      "inference_time_ms": null,
+      "message": "Crop or plant part is unclear. Upload a clearer tomato or chilli leaf photo, or select the crop manually.",
+      "next_action": "select_crop",
+      "routing_metadata": {
+        "gemini_image_routing_consent": false,
+        "gemini_request_success": null,
+        "gemini_failure_reason": null,
+        "image_quality": null,
+        "needs_confirmation": false,
+        "routing_observations": [],
+        "fallback_reason": "uncertain_crop_or_image"
+      },
+      "created_at": "2026-11-05T02:03:44.929499"
+    }
+  },
+  "fruit": {
+    "pass": true,
+    "detail": {
+      "inspection_id": "8a2cb1d4-82cf-4b56-8fb1-38676f405d91",
+      "status": "unsupported_plant_part",
+      "identification": {
+        "crop": "tomato",
+        "plant_part": "fruit",
+        "source": "manual_hint",
+        "certainty": "high"
+      },
+      "selected_model": null,
+      "prediction": null,
+      "assistant_message": null,
+      "inference_time_ms": null,
+      "message": "Current verified models support leaf images only.",
+      "next_action": "upload_a_clear_leaf_photo",
+      "routing_metadata": {
+        "gemini_image_routing_consent": false,
+        "gemini_request_success": null,
+        "gemini_failure_reason": null,
+        "image_quality": null,
+        "needs_confirmation": false,
+        "routing_observations": []
+      },
+      "created_at": "2026-11-05T02:03:44.958527"
+    }
+  },
+  "invalid_image": {
+    "pass": true,
+    "detail": {
+      "inspection_id": "bd275594-7447-4a78-bd57-d20085e71714",
+      "status": "invalid_image",
+      "identification": {
+        "crop": null,
+        "plant_part": null,
+        "source": "manual",
+        "certainty": "unknown"
+      },
+      "selected_model": null,
+      "prediction": null,
+      "assistant_message": null,
+      "inference_time_ms": null,
+      "message": "Unsupported or oversized image",
+      "next_action": null,
+      "routing_metadata": {},
+      "created_at": "2026-11-05T02:03:44.970454"
+    }
+  },
+  "persistence": {
+    "pass": true,
+    "detail": {
+      "inspection_id": "1341a296-1049-40fc-bf8c-2d9b1ddf1a6b",
+      "status": "completed",
+      "identification": {
+        "crop": "tomato",
+        "plant_part": "leaf",
+        "source": "manual_hint",
+        "certainty": "high"
+      },
+      "selected_model": {
+        "model_id": "tomato_disease_plantvillage_v1",
+        "status": "ready"
+      },
+      "prediction": {
+        "prediction_id": "d9b48d6a-53c7-46fb-aa75-e74611b3b4d4",
+        "predicted_class": "Early blight",
+        "confidence": 0.9939590692520142,
+        "top_predictions": [
+          {
+            "label": "Early blight",
+            "confidence": 0.9939590692520142
+          },
+          {
+            "label": "Septoria leaf spot",
+            "confidence": 0.00567666906863451
+          },
+          {
+            "label": "Late blight",
+            "confidence": 0.0003558831522241235
+          }
+        ],
+        "inference_time_ms": 11.68
+      },
+      "assistant_message": null,
+      "inference_time_ms": 11.68,
+      "message": "Local CropScope leaf-model result.",
+      "next_action": null,
+      "routing_metadata": {
+        "gemini_image_routing_consent": false,
+        "gemini_request_success": null,
+        "gemini_failure_reason": null,
+        "image_quality": null,
+        "needs_confirmation": false,
+        "routing_observations": []
+      },
+      "created_at": "2026-11-05T02:03:44.579093"
+    }
+  },
+  "direct_prediction": {
+    "pass": true,
+    "detail": {
+      "model_id": "chilli_disease_v1",
+      "model_version": "1",
+      "predicted_label": "Bacterial Spot",
+      "confidence": 0.6535269618034363,
+      "top_k": [
+        {
+          "label": "Bacterial Spot",
+          "confidence": 0.6535269618034363
+        },
+        {
+          "label": "Cercospora Leaf Spot",
+          "confidence": 0.333408385515213
+        },
+        {
+          "label": "Nutrition Deficiency",
+          "confidence": 0.012598172761499882
+        }
+      ],
+      "inference_time_ms": 15.29,
+      "prediction_id": "a5712906-e989-4942-b9c1-645672b51d74"
+    }
+  }
+}
